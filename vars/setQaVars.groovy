@@ -7,5 +7,5 @@ def call(){
                 env.MAVEN_SNAPSHOT_REPO = "repo-snapshot"
                 env.MAVEN_RELEASE_REPO = "repo-release"
 		env.TARGET = "QA"
-                env.TEST = """${sh(script: 'echo "$JOB_NAME/test"', returnStdout: true).trim().toLowerCase()}"""
+                env.TEST = $JOB_NAME.trim().toLowerCase().replaceAll("/",":")
 }
