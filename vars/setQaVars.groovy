@@ -7,5 +7,5 @@ def call(){
                 env.MAVEN_SNAPSHOT_REPO = "repo-snapshot"
                 env.MAVEN_RELEASE_REPO = "repo-release"
 		env.TARGET = "QA"
-                env.TEST = $JOB_NAME.trim().toLowerCase().replaceAll("/",":")
+                env.TEST = env.JOB_NAME.trim().toLowerCase().replaceAll("/",":")
 }
