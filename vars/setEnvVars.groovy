@@ -22,5 +22,9 @@ def call(target) {
                 env.TARGET = "STG"
                 env.TEST = env.JOB_NAME.trim().toLowerCase().replaceAll("/",":")
 	}
+	
+	env.TARGET_UPPER = env.TARGET.toUpperCase()
+	env.TARGET_LOWER = env.TARGET.toLowerCase()
+	env.TARGET_CAMEL = env.TARGET.capitalize()
 }
 
